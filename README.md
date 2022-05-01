@@ -1,8 +1,9 @@
 # API
 
-# Jonathan Monti
+** Jonathan Monti ** 
 
-# Nicolas Djaouane
+** Nicolas Djaouane **
+
 *les liens qu'on a utiliser pour essayer de comprendre*
 
 ```
