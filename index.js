@@ -69,27 +69,27 @@ var dbConn = mysql.createConnection({
     
     //  Update user with id
     app.put('/user', function (req, res) {
-    let user_id = req.body.user_id;
-    let user = req.body.user;
-    if (!user_id || !user) {
-    return res.status(400).send({ error: user, message: 'Please provide user and user_id' });
+        let user_id = req.body.user_id;
+        let user = req.body.user;
+        if (!user_id || !user) {
+            return res.status(400).send({ error: user, message: 'Please provide user and user_id' });
     }
     
     dbConn.query("UPDATE users SET user = ? WHERE id = ?", [user, user_id], function (error, results, fields) {
     if (error) throw error;
-    return res.send({ error: false, data: results, message: 'user has been updated successfully.' });
+        return res.send({ error: false, data: results, message: 'user has been updated successfully.' });
     });
     });
     
     //  Delete user
     app.delete('/user', function (req, res) {
-    let user_id = req.body.user_id;
-    if (!user_id) {
-    return res.status(400).send({ error: true, message: 'Please provide user_id' });
+        let user_id = req.body.user_id;
+        if (!user_id) {
+        return res.status(400).send({ error: true, message: 'Please provide user_id' });
     }
     
     dbConn.query('DELETE FROM users WHERE id = ?', [user_id], function (error, results, fields) {
-    if (error) throw error;
-    return res.send({ error: false, data: results, message: 'User has been updated successfully.' });
-    });
+        if (error) throw error;
+        return res.send({ error: false, data: results, message: 'User has been updated successfully.' });
+        });
     }); 
