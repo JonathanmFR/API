@@ -63,7 +63,7 @@ var dbConn = mysql.createConnection({
     
     dbConn.query("INSERT INTO users SET ? ", { user: user }, function (error, results, fields) {
         if (error) throw error;
-        return res.send({ error: false, data: results, message: 'Le nouvelle utilisateur a bien été crée.' });
+        return res.send({ error: false, data: results, message: 'Le nouvelle utilisateur a bien été créé.' });
     });
     });
     
@@ -77,7 +77,7 @@ var dbConn = mysql.createConnection({
     
     dbConn.query("UPDATE users SET user = ? WHERE id = ?", [user, user_id], function (error, results, fields) {
     if (error) throw error;
-        return res.send({ error: false, data: results, message: 'Le nouvelle utilisateur a bien été modofier.' });
+        return res.send({ error: false, data: results, message: 'Le nouvelle utilisateur a bien été modifié.' });
     });
     });
     
@@ -90,6 +90,6 @@ var dbConn = mysql.createConnection({
     
     dbConn.query('DELETE FROM users WHERE id = ?', [user_id], function (error, results, fields) {
         if (error) throw error;
-        return res.send({ error: false, data: results, message: 'Le nouvelle utilisateur a bien été modifier.' });
+        return res.send({ error: false, data: results, message: 'Le nouvelle utilisateur a bien été modifié.' });
         });
     }); 
