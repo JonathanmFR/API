@@ -1,12 +1,5 @@
 const mysql = require('mysql')
 
-const connectionData = {
-  host: 'localhost',
-  user: 'u',
-  password: 'root',
-  database: 'tp_node_js',
-}
-
 let connection;
 
 /**
